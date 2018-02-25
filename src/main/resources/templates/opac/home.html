@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8"/>
+<title>ホーム画面</title>
+<link href="/css/tabs.css" th:href="@{/css/tabs.css}" rel="stylesheet"></link>
+</head>
+<body>
+<h1>ここに画像を表示させる</h1>
+<img th:src="@{/img/mizutama.gif}" alt="本のイラスト"/>
+<p id="menutab">
+  <a href="#explain">当サイトについて</a>
+  <a href="#searchBooks">図書館蔵書検索</a>
+  <a href="#editUserInfo">ユーザー登録情報編集</a>
+  <a href="#inquiry">お問い合わせはこちら</a>
+</p>
+
+<div id="pageContents">
+  <div id="explain" layout:fragment="searchBooks">タブ１</div>
+  <div id="searchBooks"><object type="text/html" data="./searchBooks.html" height="300px" width="100px"></object></div>
+  <div id="editUserInfo">タブ３</div>
+  <div id="inquiry">タブ４</div>
+</div>
+
+<p><a th:href="@{xxx}">蔵書検索</a></p>
+<p><a th:href="@{xxx}">登録情報編集</a></p>
+<script src="/js/tabmenu.js" th:src="@{/js/tabmenu.js}"></script>
+</body>
+</html>
